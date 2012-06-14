@@ -53,8 +53,14 @@ Imestre::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
-	root :to => 'users#sign_in'
+	authenticated :user do
+		root :to => redirect("/asks/")
+		
+		
+		
+	end
 	
+	root :to => redirect("/users/sign_in")
 	
   # See how all your routes lay out with "rake routes"
 
