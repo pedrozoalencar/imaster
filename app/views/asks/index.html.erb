@@ -1,0 +1,38 @@
+<h1>Listing asks</h1>
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
+<table border=1 style="width:80%;border-collapse: collapse;">
+  <tr>
+    <th>Description</th>
+    <th>Details</th>
+    <th>Owner</th>
+    <th>Current State</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @asks.each do |ask| %>
+  <tr>
+    
+    <td><%= ask.description %></td>
+    <td><%= ask.details %></td>
+    <td><%= ask.applied_roles[0].users[0].email %></td>
+    <td><%= ask.current_state %></td>
+    <td><%= link_to 'Show', ask %></td>
+    <td><%= link_to 'Edit', edit_ask_path(ask) %></td>
+    <td><%= link_to 'Destroy', ask, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ask', new_ask_path %>
