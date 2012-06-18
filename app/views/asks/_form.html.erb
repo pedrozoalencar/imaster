@@ -1,7 +1,7 @@
 <%= form_for(@ask) do |f| %>
   <% if @ask.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@ask.errors.count, "error") %> prohibited this ask from being saved:</h2>
+      <h2><%= pluralize(@ask.errors.count, t("generic.error"))%> <%= t 'ask.prohibited_save' %> </h2>
 
       <ul>
       <% @ask.errors.full_messages.each do |msg| %>
@@ -22,8 +22,8 @@
   <div class="actions">
     <%= hidden_field_tag 'submit_type' %>
     
-    <%= f.submit "Publicar" %>
+    <%= f.submit t('actions.publish') %>
       
-    <%= f.submit "Salvar como Rascunho", :onClick => "document.getElementById('submit_type').value = 'draft';"%>
+    <%= f.submit t('actions.save_as_draft'), :onClick => "document.getElementById('submit_type').value = 'draft';"%>
   </div>
 <% end %>

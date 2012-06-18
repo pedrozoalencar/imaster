@@ -1,13 +1,13 @@
 <p>
-  <b>Description:</b>
+  <b><%= Ask.human_attribute_name(:description) %>:</b>
   <%= @ask.description %>
 </p>
 
 <p>
-  <b>Details:</b>
+  <b><%= Ask.human_attribute_name(:details) %>:</b>
   <%= @ask.details %>
 </p>
 
 
-<%= link_to 'Edit', edit_ask_path(@ask) %> |
-<%= link_to 'Back', asks_path %>
+<%= link_to t('actions.edit'), edit_ask_path(@ask) %> |
+<%= link_to t('actions.back'), asks_path %>

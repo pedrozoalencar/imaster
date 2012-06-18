@@ -1,19 +1,19 @@
-<h1>Listing asks</h1>
+<h1><%= t('ask.title_index_page') %></h1>
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  <%= link_to( t('actions.logout'), destroy_user_session_path, :method => :delete) %>        
   </li>
 <% else %>
   <li>
-  <%= link_to('Login', new_user_session_path)  %>  
+  <%= link_to( t('actions.login'), new_user_session_path)  %>  
   </li>
 <% end %>
-<table border=1 style="width:80%;border-collapse: collapse;">
+<table border=1 style="width:80%;border-collapse: collapse;margin-top:30px">
   <tr>
-    <th>Description</th>
-    <th>Details</th>
-    <th>Owner</th>
-    <th>Current State</th>
+    <th><%= Ask.human_attribute_name(:description) %></th>
+    <th><%= Ask.human_attribute_name(:details) %></th>
+    <th><%= Ask.human_attribute_name(:author) %></th>
+    <th><%= Ask.human_attribute_name(:current_state) %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -24,15 +24,15 @@
     
     <td><%= ask.description %></td>
     <td><%= ask.details %></td>
-    <td><%= ask.applied_roles[0].users[0].email %></td>
-    <td><%= ask.current_state %></td>
-    <td><%= link_to 'Show', ask %></td>
-    <td><%= link_to 'Edit', edit_ask_path(ask) %></td>
-    <td><%= link_to 'Destroy', ask, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= author(ask).email unless author(ask).nil? %></td>
+    <td><%= t('workflow.' + ask.current_state.to_s).capitalize! %></td>
+    <td><%= link_to t('actions.show'), ask %></td>
+    <td><%= link_to t('actions.edit'), edit_ask_path(ask) %></td>
+    <td><%= link_to t('actions.destroy'), ask, confirm: t('notice.destroy'), method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Ask', new_ask_path %>
+<%= link_to t('ask.button_new'), new_ask_path %>

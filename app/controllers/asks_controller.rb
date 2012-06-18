@@ -46,24 +46,23 @@ class AsksController < ApplicationController
   # POST /asks.json
   def create
     @ask = Ask.new(params[:ask])
-    
-    #Transitions of workflow
-    case params[:submit_type]
-    when 'draft'
-      @ask.save_as_draft!
-    else
-      @ask.submit!
-    end
-
 
     respond_to do |format|
       
       if @ask.save
         
+        #Transitions of workflow
+        case params[:submit_type]
+        when 'draft'
+          @ask.save_as_draft!
+        else
+          @ask.submit!
+        end
+
         #Adding author role
         current_user.add_role :author, @ask
 		        
-        format.html { redirect_to @ask, notice: 'Ask was successfully created.' }
+        format.html { redirect_to @ask, notice: t('ask.successfully_save') }
         format.json { render json: @ask, status: :created, location: @ask }
       else
         format.html { render action: "new" }
@@ -92,7 +91,7 @@ class AsksController < ApplicationController
       raise Exceptions::IsNotAuthorError unless current_user.has_role? :author, @ask 
       
       if @ask.update_attributes(params[:ask])
-        format.html { redirect_to @ask, notice: 'Ask was successfully updated.' }
+        format.html { redirect_to @ask, notice: t('ask.successfully_update') }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -118,7 +117,7 @@ class AsksController < ApplicationController
   
   def user_is_not_author
     respond_to do |format|
-      format.html { redirect_to asks_url, notice: 'You is not author this ask.' }
+      format.html { redirect_to asks_url, notice: t('ask.not_author_error') }
       format.json { head :no_content, status: :access_denied }
     end
   end

@@ -1,7 +1,13 @@
 Imestre::Application.routes.draw do
-  resources :asks
+  # resources :asks
 
   devise_for :users
+  
+  localized(I18n.available_locales, :verbose => true) do
+  
+  	resources :asks
+  	# resource  :contact
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

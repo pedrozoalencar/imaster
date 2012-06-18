@@ -2,6 +2,8 @@ class Ask < ActiveRecord::Base
   resourcify
   include Workflow
   attr_accessible :description, :details
+  
+  validates_presence_of :description, :details
 
   
   workflow do

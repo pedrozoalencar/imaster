@@ -1,0 +1,5 @@
+<p><%= t('devise.titles.confirmation_instructions',@resource.email) %></p>
+
+<p><%= t('devise.confirmations.you_can_confirm_account') %></p>
+
+<p><%= link_to t('devise.actions.confirm_my_account'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
