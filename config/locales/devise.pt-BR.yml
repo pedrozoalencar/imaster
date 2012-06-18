@@ -81,7 +81,7 @@ pt-BR:
       updated: A sua conta foi atualizada com sucesso.
       leave_blank_if: Deixe em branco se você não quizer alterá-la
       we_need_your_password: Nós precisamos da sua senha para confimar as alterações.	
-      intro_cancel_account:	Infeliz?
+      intro_cancel_account:	'Infeliz?'
     sessions:
       signed_in: Login efetuado com sucesso.
       signed_out: Logout efetuado com sucesso.
@@ -94,7 +94,6 @@ pt-BR:
       unlocked: A sua conta foi desbloqueada com sucesso. Você está autenticado.
       your_account_is_locked: Sua conta foi bloqueada por excesso de tentativas de login mal-sucessidas.
       link_unlock_account: Clique no link abaixo para desbloquear sua conta.
-      
   errors:
     messages:
       already_confirmed: já foi confirmado
