@@ -45,7 +45,7 @@ gem 'rolify'
 gem 'workflow'
 gem 'devise-i18n'
 gem 'i18n_routing'
-
+gem 'newrelic_rpm'
 
 
 
