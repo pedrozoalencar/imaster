@@ -14,3 +14,9 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+.DS_Store
+*.gem
+.bundle
+Gemfile.lock
+pkg/*
+.rbx/*
