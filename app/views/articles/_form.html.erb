@@ -1,0 +1,139 @@
+<%= form_for(@article) do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= hidden_field_tag 'matter_father_id' %>
+  </div>
+  <!-- <div class="field">
+    <%= hidden_field_tag 'matter_id' %>
+  </div> -->
+  <div class="field">
+    <%= hidden_field_tag 'article[matrix_content_type_id]' %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= hidden_field_tag 'submit_type' %>
+    
+    <%= f.submit t('actions.publish') %>
+    <%= f.submit t('actions.save_as_draft'), :onClick => "document.getElementById('submit_type').value = 'draft';"%>
+  </div>
+<script>
+ var matrix_content_type = new Array();
+ $(document).ready(function() {
+ $.ajax({
+    url: "/admin/matrix_content_types/search.json?content_type_id=1",
+    dataType: "json", 
+    success: function(data){
+      if( data instanceof Array ) {
+      }
+      else {
+        data = [data];
+      }
+      matrix_content_type = data;
+
+      var arrayJson = new Array();
+      var count = 0;
+      $.each(matrix_content_type,function(i) {
+        obj = {id: this.matter_father.id, text: this.matter_father.name};
+        arrayJson[count] = obj;
+        count++;
+      });
+
+      $("#matter_father_id").select2({
+        placeholder: "Selecione um Categoria",
+        width: 'element',
+        data: arrayJson,
+        // formatResult: movieFormatResult, // omitted for brevity, see the source of this page
+        // formatSelection: movieFormatSelection,  // omitted for brevity, see the source of this page
+        dropdownCssClass: "bigdrop" // apply css that makes the dropdown taller
+      });
+
+      $("#article_matrix_content_type_id").select2({
+        placeholder: "Selecione uma SubCategoria",
+        width: 'element',
+        data: {},
+        // formatResult: movieFormatResult, // omitted for brevity, see the source of this page
+        // formatSelection: movieFormatSelection,  // omitted for brevity, see the source of this page
+        dropdownCssClass: "bigdrop" // apply css that makes the dropdown taller
+      });
+
+      // $("#article_matrix_content_type_id").select2({
+      //   placeholder: "Selecione um Tipo de Conteúdo",
+      //   width: 'element',
+      //   data: {},
+      //   // formatResult: movieFormatResult, // omitted for brevity, see the source of this page
+      //   // formatSelection: movieFormatSelection,  // omitted for brevity, see the source of this page
+      //   dropdownCssClass: "bigdrop" // apply css that makes the dropdown taller
+      // });
+
+      $("#matter_father_id")
+        .on("change", function(e) {
+          var arrayFilhoJson = new Array(); 
+          count2 = 0;
+          
+          $.each(matrix_content_type,function(i) {
+            if(e.val == this.matter_father.id) {
+              obj = {id: this.id, text: this.matter.name};
+              arrayFilhoJson[count2] = obj;
+              count2++;
+            }
+          });
+
+          $("#article_matrix_content_type_id").select2({
+            placeholder: "Selecione uma SubCategoria",
+            width: 'element',
+            data: arrayFilhoJson,
+            // formatResult: movieFormatResult, // omitted for brevity, see the source of this page
+            // formatSelection: movieFormatSelection,  // omitted for brevity, see the source of this page
+            dropdownCssClass: "bigdrop" // apply css that makes the dropdown taller
+        });
+      });
+
+
+      // $("#matter_id")
+      //   .on("change", function(e) {
+      //     var arrayContentTypeJson = new Array(); 
+      //     count3 = 0;
+          
+      //     $.each(matrix_content_type,function(i) {
+      //       if(e.val == this.matter.id) {
+      //         obj = {id: this.id, text: this.content_type.name};
+      //         arrayContentTypeJson[count3] = obj;
+      //         count3++;
+      //       }
+      //     });
+
+      //     $("#article_matrix_content_type_id").select2({
+      //       placeholder: "Selecione um Tipo de Conteúdo",
+      //       width: 'element',
+      //       data: arrayContentTypeJson,
+      //       // formatResult: movieFormatResult, // omitted for brevity, see the source of this page
+      //       // formatSelection: movieFormatSelection,  // omitted for brevity, see the source of this page
+      //       dropdownCssClass: "bigdrop" // apply css that makes the dropdown taller
+      //   });
+      // });
+
+
+    }  
+  });  
+ });
+</script>
+
+<% end %>

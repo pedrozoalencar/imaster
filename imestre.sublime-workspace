@@ -1,0 +1,616 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Matri",
+				"MatrixContentType"
+			],
+			[
+				"content",
+				"content_type"
+			],
+			[
+				"matrix_",
+				"matrix_content_type_id"
+			],
+			[
+				"matther_father",
+				"matther_father_id"
+			],
+			[
+				"matter_",
+				"matter_father_id"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/models/matrix_content_type.rb",
+			"settings":
+			{
+				"buffer_size": 820,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/admin/matrix_content_types/_form.html.erb",
+			"settings":
+			{
+				"buffer_size": 3899,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"selected_items":
+		[
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Developer/workspace_ruby/imestre/Gemfile",
+		"/Developer/workspace_ruby/imestre/app/views/admin/index.html.erb",
+		"/Developer/workspace_ruby/imestre/app/views/admin/matrix_content_types/new.html.erb",
+		"/Developer/workspace_ruby/imestre/app/models/matter.rb",
+		"/Developer/workspace_ruby/imestre/app/models/ask.rb",
+		"/Developer/workspace_ruby/imestre/app/controllers/asks_controller.rb",
+		"/Developer/workspace_ruby/imestre/app/views/admin/matters/index.html.erb",
+		"/Developer/workspace_ruby/imestre/config/locales/pt-BR.yml",
+		"/Developer/workspace_ruby/imestre/app/models/matrix_content_type.rb",
+		"/Developer/workspace_ruby/imestre/db/schema.rb",
+		"/Developer/workspace_ruby/imestre/app/controllers/articles_controller.rb",
+		"/Developer/workspace_ruby/imestre/app/models/article.rb",
+		"/Developer/workspace_ruby/imestre/app/views/admin/matters/_form.html.erb",
+		"/Developer/workspace_ruby/imestre/app/controllers/admin/matters_controller.rb",
+		"/Developer/workspace_ruby/imestre/config/routes.rb",
+		"/Developer/workspace_ruby/imestre/app/views/articles/_form.html.erb",
+		"/Developer/workspace_ruby/imestre/app/controllers/admin/matrix_content_types_controller.rb",
+		"/Developer/workspace_ruby/imestre/app/views/admin/matrix_content_types/_form.html.erb",
+		"/Developer/workspace_ruby/imestre/app/views/layouts/application.html.erb",
+		"/Developer/workspace_ruby/imestre/app/controllers/matters_controller.rb",
+		"/Developer/workspace_ruby/imestre/app/views/admin/matrix_content_types/index.html.erb",
+		"/Developer/workspace_ruby/imestre/app/views/admin/matrix_content_types/edit.html.erb",
+		"/Developer/workspace_ruby/imestre/app/controllers/matrix_content_types_controller.rb",
+		"/Developer/workspace_ruby/imestre/app/assets/stylesheets/application.css",
+		"/Developer/workspace_ruby/imestre/app/assets/stylesheets/my_bootstrap.css.scss",
+		"/Developer/workspace_ruby/imestre/config/initializers/inflections.rb",
+		"/Developer/workspace_ruby/imestre/app/views/asks/_form.html.erb",
+		"/Developer/workspace_ruby/imestre/app/views/admin/matters/show.html.erb",
+		"/Developer/workspace_ruby/imestre/app/views/admin/matters/new.html.erb",
+		"/Developer/workspace_ruby/imestre/app/views/admin/matters/edit.html.erb",
+		"/Developer/workspace_ruby/imestre/app/views/admin/matrix_content_types/show.html.erb",
+		"/Developer/workspace_ruby/imestre/app/assets/javascripts/application.js",
+		"/Developer/workspace_ruby/imestre/test/fixtures/matters.yml",
+		"/Developer/workspace_ruby/imestre/app/helpers/asks_helper.rb",
+		"/Developer/workspace_ruby/imestre/app/views/asks/index.html.erb",
+		"/Developer/workspace_ruby/imestre/lib/Exceptions/is_not_author_error.rb",
+		"/Developer/workspace_ruby/imestre/db/migrate/20120802182900_add_column_workflow_state_to_matrix_content_type.rb",
+		"/Developer/workspace_ruby/imestre/db/migrate/20120802181718_add_column_workflow_state_to_content_type.rb",
+		"/Developer/workspace_ruby/imestre/app/models/content_type.rb",
+		"/Developer/workspace_ruby/imestre/db/migrate/20120613104910_add_columnn_workflow_state_ask.rb",
+		"/Developer/workspace_ruby/imestre/app/helpers/admin/matters_helper.rb",
+		"/Developer/workspace_ruby/imestre/app/views/articles/index.html.erb",
+		"/Developer/workspace_ruby/imestre/test/unit/matter_test.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Developer/workspace_ruby/forex_school/config"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"user_is_not_author",
+			"redirect_to @matrix_content_type",
+			"encod",
+			"asks",
+			"@ask"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"redirect_to admin_matrix_content_type_path(@matrix_content_type)",
+			"@matter"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/models/matrix_content_type.rb",
+					"settings":
+					{
+						"buffer_size": 820,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/admin/matrix_content_types/_form.html.erb",
+					"settings":
+					{
+						"buffer_size": 3899,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 704.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"contentform",
+				"app/views/admin/matrix_content_types/_form.html.erb"
+			],
+			[
+				"content.rb",
+				"app/models/matrix_content_type.rb"
+			],
+			[
+				"matrixform",
+				"app/views/admin/matrix_content_types/_form.html.erb"
+			],
+			[
+				"matrixcontroller",
+				"app/controllers/admin/matrix_content_types_controller.rb"
+			],
+			[
+				"",
+				"app/views/articles/_form.html.erb"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"matricontroller",
+				"app/controllers/admin/matrix_content_types_controller.rb"
+			],
+			[
+				"matter",
+				"app/controllers/admin/matters_controller.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"articleform",
+				"app/views/articles/_form.html.erb"
+			],
+			[
+				"matrix_conform",
+				"app/views/admin/matrix_content_types/_form.html.erb"
+			],
+			[
+				"matterform",
+				"app/views/admin/matters/_form.html.erb"
+			],
+			[
+				"article",
+				"app/models/article.rb"
+			],
+			[
+				"articlecontroller",
+				"app/controllers/articles_controller.rb"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"matrix",
+				"app/models/matrix_content_type.rb"
+			],
+			[
+				"pt",
+				"config/locales/pt-BR.yml"
+			],
+			[
+				"application",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"matterindex",
+				"app/views/admin/matters/index.html.erb"
+			],
+			[
+				"ask_contoller",
+				"app/controllers/asks_controller.rb"
+			],
+			[
+				"ask",
+				"app/models/ask.rb"
+			],
+			[
+				"pt-",
+				"config/locales/pt-BR.yml"
+			],
+			[
+				"matters_con",
+				"app/controllers/admin/matters_controller.rb"
+			],
+			[
+				"adminmattercontroller",
+				"app/controllers/admin/matters_controller.rb"
+			],
+			[
+				"matrix_contn",
+				"app/models/matrix_content_type.rb"
+			],
+			[
+				"matter_cont",
+				"app/controllers/admin/matters_controller.rb"
+			],
+			[
+				"ask_cont",
+				"app/controllers/asks_controller.rb"
+			],
+			[
+				"mater_controller",
+				"app/controllers/matters_controller.rb"
+			],
+			[
+				"ask_",
+				"app/controllers/asks_controller.rb"
+			],
+			[
+				"adminmatter",
+				"app/controllers/admin/matters_controller.rb"
+			],
+			[
+				"matrixnew",
+				"app/views/admin/matrix_content_types/new.html.erb"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"index",
+				"app/views/admin/index.html.erb"
+			],
+			[
+				"matrixshow",
+				"app/views/admin/matrix_content_types/show.html.erb"
+			],
+			[
+				"matrixindex",
+				"app/views/admin/matrix_content_types/index.html.erb"
+			],
+			[
+				"matrixhtml",
+				"app/views/admin/matrix_content_types/show.html.erb"
+			],
+			[
+				"adminmatrixedit",
+				"app/views/admin/matrix_content_types/edit.html.erb"
+			],
+			[
+				"matter_form",
+				"app/views/admin/matters/_form.html.erb"
+			],
+			[
+				"matrixcontorller",
+				"app/controllers/admin/matrix_content_types_controller.rb"
+			],
+			[
+				"controllermatter",
+				"app/controllers/admin/matters_controller.rb"
+			],
+			[
+				"mattercono",
+				"app/controllers/admin/matters_controller.rb"
+			],
+			[
+				"mattercontroller",
+				"app/controllers/admin/matters_controller.rb"
+			],
+			[
+				"matter_conr",
+				"app/controllers/matters_controller.rb"
+			],
+			[
+				"matters_controller",
+				"app/controllers/admin/matters_controller.rb"
+			],
+			[
+				"application.css",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"aplication.js",
+				"app/assets/javascripts/application.js"
+			],
+			[
+				"my_boot",
+				"app/assets/stylesheets/my_bootstrap.css.scss"
+			],
+			[
+				"ask_contro",
+				"app/controllers/asks_controller.rb"
+			],
+			[
+				"ak",
+				"app/models/ask.rb"
+			],
+			[
+				"edit",
+				"app/views/admin/matters/edit.html.erb"
+			],
+			[
+				"infle",
+				"config/initializers/inflections.rb"
+			],
+			[
+				"index.html",
+				"app/views/admin/index.html.erb"
+			],
+			[
+				"matter_contro",
+				"app/controllers/admin/matters_controller.rb"
+			],
+			[
+				"inf",
+				"config/initializers/inflections.rb"
+			],
+			[
+				"pt-br",
+				"config/locales/pt-BR.yml"
+			],
+			[
+				"adminindex",
+				"app/views/admin/index.html.erb"
+			],
+			[
+				"matterhtml",
+				"app/views/admin/matters/show.html.erb"
+			],
+			[
+				"matter.html",
+				"app/views/admin/matters/_form.html.erb"
+			],
+			[
+				"adminmattercon",
+				"app/controllers/admin/matters_controller.rb"
+			],
+			[
+				"matter_con",
+				"app/controllers/matters_controller.rb"
+			],
+			[
+				"askform",
+				"app/views/asks/_form.html.erb"
+			],
+			[
+				"adminmatterform",
+				"app/views/admin/matters/_form.html.erb"
+			],
+			[
+				"matter_he",
+				"app/helpers/admin/matters_helper.rb"
+			],
+			[
+				"adminmatterhtml",
+				"app/views/admin/matters/show.html.erb"
+			],
+			[
+				"matteredit",
+				"app/views/admin/matters/edit.html.erb"
+			],
+			[
+				"adminmattercontrol",
+				"app/controllers/admin/matters_controller.rb"
+			],
+			[
+				"articl_form",
+				"app/views/articles/_form.html.erb"
+			],
+			[
+				"matters_",
+				"app/controllers/matters_controller.rb"
+			],
+			[
+				"matters_co",
+				"app/controllers/matters_controller.rb"
+			],
+			[
+				"matte",
+				"app/models/matter.rb"
+			],
+			[
+				"matters",
+				"test/fixtures/matters.yml"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"mate",
+				"test/unit/matter_test.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
+			[
+				"shema",
+				"db/schema.rb"
+			],
+			[
+				"author",
+				"lib/Exceptions/is_not_author_error.rb"
+			],
+			[
+				"add_column",
+				"db/migrate/20120802182900_add_column_workflow_state_to_matrix_content_type.rb"
+			],
+			[
+				"add",
+				"db/migrate/20120802181718_add_column_workflow_state_to_content_type.rb"
+			],
+			[
+				"add_colum",
+				"db/migrate/20120802181718_add_column_workflow_state_to_content_type.rb"
+			],
+			[
+				"contenttype",
+				"app/models/content_type.rb"
+			],
+			[
+				"migra",
+				"db/migrate/20120613104910_add_columnn_workflow_state_ask.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Developer/workspace_ruby/forex_school/forex_shool.sublime-project"
+			],
+			[
+				"renat",
+				"/Developer/workspace_ruby/ralencar/renatoalencar.sublime-project"
+			],
+			[
+				"renato",
+				"/Developer/workspace_ruby/ralencar/renatoalencar.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

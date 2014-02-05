@@ -1,0 +1,29 @@
+<h1>Listing articles</h1>
+
+<table>
+  <tr>
+    <th>Matrix content type</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Workflow state</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+    <td><%= article.matrix_content_type_id %></td>
+    <td><%= article.title %></td>
+    <td><%= article.content %></td>
+    <td><%= article.workflow_state %></td>
+    <td><%= link_to 'Show', article %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Article', new_article_path %>

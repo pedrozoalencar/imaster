@@ -1,0 +1,112 @@
+<%= form_for([:admin, @matrix_content_type]) do |f| %>
+  <% if @matrix_content_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@matrix_content_type.errors.count, "error") %> prohibited this matrix_content_type from being saved:</h2>
+
+      <ul>
+      <% @matrix_content_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= hidden_field_tag 'matrix_content_type[matter_father_id]',%>
+  </div>
+  <div class="field">
+    <%= hidden_field_tag 'matrix_content_type[matter_id]' %>
+  </div>
+  <div class="field">
+    <%= hidden_field_tag 'matrix_content_type[content_type_id]' %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <script>
+ var matters = new Array();
+ $(document).ready(function() {
+   $.ajax({
+      url: "/admin/matters.json",
+      dataType: "json", 
+      success: function(data){
+        matters = data;
+
+        var arrayMattersFather = new Array();
+        count = 0;
+        $.each(matters,function(i) {
+          if(this.matter_father_id == null) {
+            obj = {id: this.id, text: this.name};
+            arrayMattersFather[count] = obj;
+            count++;
+          }
+        });
+        function format(item) { return item.text; };
+
+        $("#matrix_content_type_matter_father_id").select2({
+          placeholder: "Selecione um Categoria",
+          width: 'element',
+          data: {results: arrayMattersFather, text: 'text'},
+          formatResult: format, // omitted for brevity, see the source of this page
+          formatSelection: format,  // omitted for brevity, see the source of this page
+          dropdownCssClass: "bigdrop" // apply css that makes the dropdown taller
+        });
+
+        $("#matrix_content_type_matter_id").select2({
+          placeholder: "Selecione uma SubCategoria",
+          data: {},
+          width: 'element',
+          // formatResult: movieFormatResult, // omitted for brevity, see the source of this page
+          // formatSelection: movieFormatSelection,  // omitted for brevity, see the source of this page
+          dropdownCssClass: "bigdrop" // apply css that makes the dropdown taller
+        });
+
+        $("#matrix_content_type_matter_father_id")
+          .on("change", function(e) {
+            var arrayMatters = new Array();
+            count = 0;
+            $.each(matters,function(i) {
+              if(this.matter_father_id == e.val) {
+                obj = {id: this.id, text: this.name};
+                arrayMatters[count] = obj;
+                count++;
+              }
+            });
+            
+            $("#matrix_content_type_matter_id").select2({
+              placeholder: "Selecione uma SubCategoria",
+              data: {results: arrayMatters, text: 'text'},
+              width: 'element',
+              // formatResult: movieFormatResult, // omitted for brevity, see the source of this page
+              // formatSelection: movieFormatSelection,  // omitted for brevity, see the source of this page
+              dropdownCssClass: "bigdrop" // apply css that makes the dropdown taller
+          });
+        });
+      }  
+    });  
+
+
+    $.ajax({
+      url: "/admin/content_types.json",
+      dataType: "json", 
+      success: function(data) {
+        content_types = data;
+
+        function format(item) { return item.name; };
+
+        $("#matrix_content_type_content_type_id").select2({
+          placeholder: "Selecione um Tipo de Conteúdo",
+          width: 'element',
+          data: {results: content_types, text: 'name'},
+          formatResult: format, // omitted for brevity, see the source of this page
+          formatSelection: format,  // omitted for brevity, see the source of this page
+          dropdownCssClass: "bigdrop" // apply css that makes the dropdown taller
+        });
+      }  
+    });  
+
+  });
+
+</script>
+<% end %>

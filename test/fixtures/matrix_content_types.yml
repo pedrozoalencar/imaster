@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  matter_father_id: 1
+  matter_id: 1
+  content_type_id: 1
+
+two:
+  matter_father_id: 1
+  matter_id: 1
+  content_type_id: 1

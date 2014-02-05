@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  matter_father_id: 1
+  workflow_state: MyString
+
+two:
+  name: MyString
+  matter_father_id: 1
+  workflow_state: MyString

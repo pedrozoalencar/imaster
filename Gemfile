@@ -46,6 +46,9 @@ gem 'workflow'
 gem 'devise-i18n'
 gem 'i18n_routing'
 gem 'newrelic_rpm'
+gem 'acts-as-taggable-on', '~> 2.3.1'
+gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
+gem "select2-rails"
 
 
 

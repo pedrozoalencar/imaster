@@ -1,4 +1,8 @@
 Imestre::Application.routes.draw do
+  get "admin/index"
+
+  
+
   # resources :asks
 
   devise_for :users
@@ -6,6 +10,15 @@ Imestre::Application.routes.draw do
   localized(I18n.available_locales, :verbose => true) do
   
   	resources :asks
+    namespace :admin do
+      resources :matters do
+        collection do
+          get :search
+        end
+      end
+    end
+    resources :articles
+    resources :content_types
   	# resource  :contact
   end
 
@@ -55,6 +68,18 @@ Imestre::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  namespace :admin do
+    root :to => "admin#index"
+    # resources :matters
+    resources :content_types
+    resources :matrix_content_types do
+      collection do
+        get :search
+      end
+    end
+  end
+  
+
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

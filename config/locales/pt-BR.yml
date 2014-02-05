@@ -30,6 +30,14 @@ pt-BR:
     successfully_save: 'Sua pergunta foi criada!'
     successfully_update: 'Sua pergunta foi alterada!'
     not_author_error: 'Você não é o author desta pergunta'
+  matter:
+    title_edit_page: 'Editar Matéria'
+    title_new_page: 'Nova Matéria'
+    title_index_page: 'Matérias'
+    button_new: 'Nova Matéria'
+    prohibited_save: 'impediram essa matéria de ser salva:'
+    successfully_save: 'Sua matéria foi criada!'
+    successfully_update: 'Sua matéria foi alterada!'
 
   activerecord:
     errors: 
@@ -47,11 +55,24 @@ pt-BR:
         body:    "There were problems with the following fields:"
     models:
       ask: 'Pergunta'
+      asks: 'Perguntas'
+      matter: 'Matéria'
+      matters: 'Matérias'
+      article: 'Artigo'
+      articles: 'Artigos'
+      content_type: 'Tipo de Conteúdo'
+      content_types: 'Tipos de Conteúdos'
+      matrix_content_types: 'Matriz de Tipos de Conteúdos'
       user: 'Usuário'
     attributes:
       ask:
         description: 'Descrição'
         details: 'Detalhes'
+        current_state: 'Status'
+        author: 'Autor'
+      matter: 
+        name: 'nome'
+        matter_father_id: 'Matéria Pai'
         current_state: 'Status'
         author: 'Autor'
       user:
@@ -61,9 +82,14 @@ pt-BR:
   path_names:
     new: 'novo'
     edit: 'editar'
+  routes:
+    matters: 
+      as: 'materias'
+      path_names:
+        matter_father: 'materia_pai'
   resources:
-    asks: 'perguntas'
-  resource:
+    content_types: 'tiposdeconteudos'
+    articles: 'artigos'
     asks: 'perguntas'
   date:
     abbr_day_names:
@@ -164,6 +190,7 @@ pt-BR:
   errors: &errors
     format: ! '%{attribute} %{message}'
     messages:
+      item_in_use: Este item não pode ser excluído, pois está vinculado a outros itens.
       accepted: deve ser aceito
       blank: não pode ficar em branco
       confirmation: não está de acordo com a confirmação

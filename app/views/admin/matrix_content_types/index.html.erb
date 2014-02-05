@@ -1,0 +1,27 @@
+<h1>Listing matrix_content_types</h1>
+
+<table>
+  <tr>
+    <th>Matter father</th>
+    <th>Matter</th>
+    <th>Content type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @matrix_content_types.each do |matrix_content_type| %>
+  <tr>
+    <td><%= matrix_content_type.matter_father.name %></td>
+    <td><%= matrix_content_type.matter.name %></td>
+    <td><%= matrix_content_type.content_type.name %></td>
+    <td><%= link_to 'Show', admin_matrix_content_type_path(matrix_content_type) %></td>
+    <td><%= link_to 'Edit', edit_admin_matrix_content_type_path(matrix_content_type) %></td>
+    <td><%= link_to 'Destroy', admin_matrix_content_type_path(matrix_content_type), confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Matrix content type', new_admin_matrix_content_type_path %>

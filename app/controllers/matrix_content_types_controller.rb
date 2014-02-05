@@ -1,0 +1,2 @@
+class MatrixContentTypesController < ApplicationController
+end

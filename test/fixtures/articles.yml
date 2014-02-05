@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  matrix_content_type_id: 1
+  title: MyString
+  content: MyText
+  workflow_state: MyString
+
+two:
+  matrix_content_type_id: 1
+  title: MyString
+  content: MyText
+  workflow_state: MyString

@@ -1,0 +1,28 @@
+<%= form_for([:admin, @matter]) do |f| %>
+  <% if @matter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@matter.errors.count, "error") %> prohibited this matter from being saved:</h2>
+
+      <ul>
+      <% @matter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :matter_father_id %><br />
+    <%= select("matter","matter_father_id", Matter.where("id <> ? and matter_father_id is null", (@matter.id == nil ? "" : @matter.id)).collect {|m| [m.name, m.id]}, :include_blank => t(:none)) %><br/>
+  </div>
+  <div class="actions">
+    <%= hidden_field_tag 'submit_type' %>
+    
+    <%= f.submit t('actions.publish') %>
+    <%= f.submit t('actions.save_as_draft'), :onClick => "document.getElementById('submit_type').value = 'draft';"%>
+  </div>
+<% end %>
